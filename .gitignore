@@ -32,3 +32,7 @@
 *.xdy
 *.tdo
 /.directory
+/.gitignore~
+/.svn/*
+/SDQ_vorlage_beamer.tex~
+/SDQ_vorlage_beamer.pdf
