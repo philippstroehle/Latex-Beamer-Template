@@ -50,17 +50,17 @@
 %get rid of navigation bars in beamer
 %http://stackoverflow.com/questions/3210205/how-to-get-rid-of-navigation-bars-in-beamer
 \beamertemplatenavigationsymbolsempty
-
+%%%%%%%%%%%%
 % the presentation starts here
-
+%%%%%%%%%%%%
 \title[Short title]{Full title:\\ With all details}
 \subtitle{Something for XYZ 2009}
 \author{Firstname1 Lastname1, Firstname2 Lastname2}
 
-\institute{Institute of Information Systems and Marketing}
-
+\institute{Institute of Information Systems and Marketing (IISM)}
+%%%%%%%%%%%%
 % Bibliography
-
+%%%%%%%%%%%%
 %\usepackage[citestyle=authoryear,bibstyle=numeric,hyperref,backend=biber]{biblatex}
 %\usepackage[citestyle=authoryear,bibstyle=biblatex-apa,backend=biber]{biblatex}
 %\usepackage[citestyle=authoryear,style=apa, backend=biber]{biblatex}
@@ -73,6 +73,17 @@
 
 \addbibresource{templates/example.bib}
 \bibhang1em
+
+\AtBeginSection[]{%
+  \begin{frame}<beamer>
+    \frametitle{Outline}
+	\hfill
+	\parbox{.73\textwidth}{
+		\tableofcontents[sectionstyle=show/show,subsectionstyle=hide/show/hide]
+	}
+  \end{frame}
+  \addtocounter{framenumber}{-1}% If you don't want them to affect the slide number
+}
 
 \begin{document}
 
@@ -87,7 +98,10 @@
 
 %table of contents
 \begin{frame}{Outline/Gliederung}
-\tableofcontents
+  \hfill
+\parbox{.73\textwidth}{
+    \tableofcontents
+  }
 \end{frame}
 
 \section{Section 1}
