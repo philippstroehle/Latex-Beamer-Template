@@ -61,13 +61,23 @@
 
 % Bibliography
 
-\usepackage[citestyle=authoryear,bibstyle=numeric,hyperref,backend=biber]{biblatex}
+%\usepackage[citestyle=authoryear,bibstyle=numeric,hyperref,backend=biber]{biblatex}
+%\usepackage[citestyle=authoryear,bibstyle=biblatex-apa,backend=biber]{biblatex}
+%\usepackage[citestyle=authoryear,style=apa, backend=biber]{biblatex}
+
+% http://tex.stackexchange.com/questions/115703/yearmonthday-added-to-bibliography-when-using-apa6-with-biblatex-and-biber-bac
+\usepackage{csquotes}
+\usepackage[style=apa,sortcites=true,sorting=nyt,backend=biber]{biblatex}
+%\DeclareLanguageMapping{english}{american-apa}
+\DeclareLanguageMapping{german}{german-apa}
+
 \addbibresource{templates/example.bib}
 \bibhang1em
 
 \begin{document}
 
 % change the following line to "ngerman" for German style date and logos
+%\selectlanguage{ngerman}
 \selectlanguage{english}
 
 %title page
